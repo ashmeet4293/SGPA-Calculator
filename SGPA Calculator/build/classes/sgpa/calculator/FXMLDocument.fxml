@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="633.0" prefWidth="428.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sgpa.calculator.FXMLDocumentController">
+    <children>
+      <MenuBar prefHeight="22.0" prefWidth="427.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Open" />
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" onAction="#handleMenuAboutUs" text="About Us">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" onAction="#handleMenuHelpAction" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <GridPane layoutX="68.0" layoutY="194.0" prefHeight="308.0" prefWidth="280.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="127.0" minWidth="10.0" prefWidth="76.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="219.0" minWidth="10.0" prefWidth="89.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="254.0" minWidth="10.0" prefWidth="137.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="23.0" prefWidth="97.0" text="Sub 1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="FreeSans Bold" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="grade1" onAction="#handleGradeAction" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label prefHeight="23.0" prefWidth="97.0" text="Sub 2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="FreeSans Bold" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="crHour1" onAction="#handleCreditHourAction" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <ComboBox fx:id="grade2" onAction="#handleGradeAction" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="crHour2" onAction="#handleCreditHourAction" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <Label prefHeight="23.0" prefWidth="97.0" text="Sub 3" GridPane.rowIndex="3">
+               <font>
+                  <Font name="FreeSans Bold" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="grade3" onAction="#handleGradeAction" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ComboBox fx:id="crHour3" onAction="#handleCreditHourAction" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <ComboBox fx:id="grade4" onAction="#handleGradeAction" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ComboBox fx:id="crHour4" onAction="#handleCreditHourAction" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <ComboBox fx:id="grade5" onAction="#handleGradeAction" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <ComboBox fx:id="crHour5" onAction="#handleCreditHourAction" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <ComboBox fx:id="grade6" onAction="#handleGradeAction" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <ComboBox fx:id="crHour6" onAction="#handleGradeAction" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <ComboBox fx:id="grade7" onAction="#handleGradeAction" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <ComboBox fx:id="crHour7" onAction="#handleGradeAction" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <ComboBox fx:id="grade8" onAction="#handleGradeAction" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <ComboBox fx:id="crHour8" onAction="#handleGradeAction" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <Label prefHeight="23.0" prefWidth="97.0" text="Sub 4" GridPane.rowIndex="4">
+               <font>
+                  <Font name="FreeSans Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="23.0" prefWidth="97.0" text="Sub 5" GridPane.rowIndex="5">
+               <font>
+                  <Font name="FreeSans Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="23.0" prefWidth="97.0" text="Sub 7" GridPane.rowIndex="7">
+               <font>
+                  <Font name="FreeSans Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="23.0" prefWidth="97.0" text="Sub 6" GridPane.rowIndex="6">
+               <font>
+                  <Font name="FreeSans Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="23.0" prefWidth="97.0" text="Sub 8" GridPane.rowIndex="8">
+               <font>
+                  <Font name="FreeSans Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="21.0" prefWidth="143.0" text="CREDIT HOURS" GridPane.columnIndex="2">
+               <font>
+                  <Font name="FreeSans Bold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+            <Label prefHeight="23.0" prefWidth="97.0" text="GRADE" textAlignment="CENTER" GridPane.columnIndex="1">
+               <font>
+                  <Font name="FreeSans Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <Label fx:id="lblShowSGPA" alignment="CENTER" layoutX="57.0" layoutY="96.0" prefHeight="83.0" prefWidth="356.0" text="Status" textAlignment="RIGHT" textFill="#dd0909" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="FreeSans Bold" size="24.0" />
+         </font>
+      </Label>
+      <HBox layoutX="70.0" layoutY="519.0" prefHeight="42.0" prefWidth="318.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleClearAction" prefHeight="56.0" prefWidth="101.0" text="CLEAR">
+               <font>
+                  <Font name="Garuda Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleCalculateSGPA" prefHeight="56.0" prefWidth="169.0" text="Calculate SGPA">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <Label layoutX="21.0" layoutY="587.0" prefHeight="38.0" prefWidth="386.0" text="Developed by Pawan Tiwari from javatar Community">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="44.0" minHeight="-Infinity" prefHeight="38.0" prefWidth="336.0" text="SGPA Calculator " textFill="#21a63b">
+         <font>
+            <Font name="Renfrew" size="36.0" />
+         </font>
+         <effect>
+            <Lighting bumpInput="$null" diffuseConstant="2.0">
+               <light>
+                  <Light.Distant color="#e4e3e3" />
+               </light>
+            </Lighting>
+         </effect>
+      </Label>
+    </children>
+</AnchorPane>
